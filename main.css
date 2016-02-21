@@ -1609,7 +1609,7 @@
 	}
 
 	h3 {
-		font-size: 1.75em;
+		font-size: 2.5em;
 		line-height: 1.5em;
 	}
 
@@ -2093,7 +2093,7 @@
 				}
 
 				ul.feature-icons li:before {
-					background: #777;
+					background: steelblue;
 					border-radius: 100%;
 					color: #ffffff;
 					display: block;
@@ -2524,7 +2524,7 @@
 		}
 
 			#header > nav ul li {
-				border-top: solid 2px teal;
+				border-top: solid 2px #307D7E;
 				display: block;
 				padding: 0;
 			}
