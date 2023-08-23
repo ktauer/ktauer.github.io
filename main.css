@@ -2535,7 +2535,7 @@
 					-ms-transition: none;
 					transition: none;
 					border: 0;
-					color: #ffffff !important;
+					color: #307d7e !important;
 					display: block;
 					padding: 0.85em 0;
 					text-decoration: none;
@@ -2543,7 +2543,7 @@
 
 					#header > nav ul li a.active {
 						background: #fff;
-						color: #777 !important;
+						color: #307d7e !important;
 					}
 
 				#header > nav ul li:first-child {
