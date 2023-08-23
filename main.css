@@ -2473,7 +2473,7 @@
 		}
 
 		#header a {
-			color: #307d7e;
+			color: #307d7e !important;
 		}
 
 			#header a:hover {
