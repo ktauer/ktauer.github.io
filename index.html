@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristen Tauer - Culture Editor & Writer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#clips">Clips</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="images/profilep.jpg" alt="Kristen Tauer">
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Kristen Tauer</h1>
+                    <p class="hero-subtitle">Culture Editor & Writer</p>
+                    <p class="hero-description">New York-based culture editor at Women's Wear Daily, covering art, fashion, film, music, and the vibrant tapestry of contemporary culture.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="decorative-shape shape-1"></div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="title-accent"></div>
+            </div>
+            <div class="about-content">
+                <p>I'm a culture editor and writer based in New York City, passionate about exploring the intersections of art, fashion, and contemporary life. My work spans across various publications, bringing insightful perspectives on the creative forces shaping our world.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work -->
+    <section id="work" class="featured-work">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Work</h2>
+                <div class="title-accent"></div>
+            </div>
+            <div class="featured-grid">
+                <div class="featured-card large">
+                    <div class="card-image">
+                        <img src="images/daniel-radcliffe-tonys-cover.jpg" alt="Daniel Radcliffe Tony Awards Feature">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Theater</span>
+                        <h3 class="card-title">Daniel Radcliffe's Tony Triumph</h3>
+                        <p class="card-excerpt">An intimate conversation with the actor about his award-winning Broadway performance and evolution as a stage artist...</p>
+                        <span class="read-time">8 min read</span>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="card-image">
+                        <img src="images/4.2.jpg" alt="Fashion Feature">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Fashion</span>
+                        <h3 class="card-title">New York Fashion Week Highlights</h3>
+                        <p class="card-excerpt">The collections, moments, and designers that defined the season...</p>
+                        <span class="read-time">6 min read</span>
+                    </div>
+                </div>
+                <div class="featured-card publications-showcase">
+                    <div class="card-content full-content">
+                        <h3 class="card-title">Published In</h3>
+                        <div class="publication-logos">
+                            <img src="images/nytimes.jpg" alt="New York Times">
+                            <img src="images/marieclaire.jpg" alt="Marie Claire">
+                            <img src="images/teenvogue.jpg" alt="Teen Vogue">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clips & Publications -->
+    <section id="clips" class="clips-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Clips & Publications</h2>
+                <div class="title-accent"></div>
+            </div>
+
+            <div class="filter-tags">
+                <button class="tag active" data-filter="all">All</button>
+                <button class="tag" data-filter="art">Art</button>
+                <button class="tag" data-filter="fashion">Fashion</button>
+                <button class="tag" data-filter="film">Film & TV</button>
+                <button class="tag" data-filter="music">Music</button>
+                <button class="tag" data-filter="theater">Theater</button>
+                <button class="tag" data-filter="food">Food & Dining</button>
+            </div>
+
+            <div class="clips-grid">
+                <div class="clip-card" data-category="fashion">
+                    <div class="clip-outlet">Women's Wear Daily</div>
+                    <h4 class="clip-title">Spring Collections Preview: Innovation Meets Tradition</h4>
+                    <div class="clip-meta">
+                        <span class="clip-date">March 2025</span>
+                        <span class="clip-tag">Fashion</span>
+                    </div>
+                </div>
+                <div class="clip-card" data-category="art">
+                    <div class="clip-outlet">The Art Newspaper</div>
+                    <h4 class="clip-title">Gallery Openings That Define the Season</h4>
+                    <div class="clip-meta">
+                        <span class="clip-date">February 2025</span>
+                        <span class="clip-tag">Art</span>
+                    </div>
+                </div>
+                <div class="clip-card" data-category="music">
+                    <div class="clip-outlet">Pitchfork</div>
+                    <h4 class="clip-title">The Resurgence of Live Performance</h4>
+                    <div class="clip-meta">
+                        <span class="clip-date">January 2025</span>
+                        <span class="clip-tag">Music</span>
+                    </div>
+                </div>
+                <div class="clip-card" data-category="film">
+                    <div class="clip-outlet">IndieWire</div>
+                    <h4 class="clip-title">Sundance 2025: Breakout Films and Directors</h4>
+                    <div class="clip-meta">
+                        <span class="clip-date">January 2025</span>
+                        <span class="clip-tag">Film & TV</span>
+                    </div>
+                </div>
+                <div class="clip-card" data-category="theater">
+                    <div class="clip-outlet">Playbill</div>
+                    <h4 class="clip-title">Broadway's Bold New Season</h4>
+                    <div class="clip-meta">
+                        <span class="clip-date">December 2024</span>
+                        <span class="clip-tag">Theater</span>
+                    </div>
+                </div>
+                <div class="clip-card" data-category="food">
+                    <div class="clip-outlet">Eater</div>
+                    <h4 class="clip-title">NYC's Most Anticipated Restaurant Openings</h4>
+                    <div class="clip-meta">
+                        <span class="clip-date">November 2024</span>
+                        <span class="clip-tag">Food & Dining</span>
+                    </div>
+                </div>
+                <div class="clip-card" data-category="fashion">
+                    <div class="clip-outlet">Vogue</div>
+                    <h4 class="clip-title">Sustainable Fashion: Beyond the Buzzword</h4>
+                    <div class="clip-meta">
+                        <span class="clip-date">October 2024</span>
+                        <span class="clip-tag">Fashion</span>
+                    </div>
+                </div>
+                <div class="clip-card" data-category="art">
+                    <div class="clip-outlet">Artforum</div>
+                    <h4 class="clip-title">Digital Art in Physical Spaces</h4>
+                    <div class="clip-meta">
+                        <span class="clip-date">September 2024</span>
+                        <span class="clip-tag">Art</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="title-accent"></div>
+            </div>
+            <div class="skills-cloud">
+                <span class="skill-tag">Editorial Leadership</span>
+                <span class="skill-tag">Digital Publishing</span>
+                <span class="skill-tag">Content Strategy</span>
+                <span class="skill-tag">Cultural Analysis</span>
+                <span class="skill-tag">Feature Writing</span>
+                <span class="skill-tag">Interviewing</span>
+                <span class="skill-tag">SEO & Analytics</span>
+                <span class="skill-tag">Social Media</span>
+                <span class="skill-tag">HTML & CMS</span>
+                <span class="skill-tag">Copy Editing</span>
+                <span class="skill-tag">Trend Forecasting</span>
+                <span class="skill-tag">Event Coverage</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="contact-text">Interested in collaborating or have a story idea? I'd love to hear from you.</p>
+                <a href="mailto:hello@kristentauer.com" class="contact-button">Get in Touch</a>
+            </div>
+            <div class="decorative-shape shape-2"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kristen Tauer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
