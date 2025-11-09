@@ -2,7 +2,7 @@
    COLOR PALETTE & VARIABLES - BAUHAUS
    ======================================== */
 :root {
-    --cream: #FDFCF8;
+    --cream: #F9F6F0;
     --charcoal: #2B2B2B;
     --bauhaus-red: #D93025;
     --bauhaus-blue: #2B5FCC;
@@ -546,6 +546,12 @@ section {
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: -0.5px;
+    text-decoration: none !important;
+}
+
+.featured-card:hover .card-title {
+    text-decoration: underline wavy var(--bauhaus-blue) !important;
+    text-underline-offset: 3px !important;
 }
 
 .featured-card.large .card-title {
@@ -636,6 +642,12 @@ section {
     font-size: 1.05rem;
     margin-bottom: 0;
     line-height: 1.5;
+    text-decoration: none !important;
+}
+
+.clip-card:hover .clip-title {
+    text-decoration: underline wavy var(--bauhaus-blue) !important;
+    text-underline-offset: 3px !important;
 }
 
 .clip-meta {
