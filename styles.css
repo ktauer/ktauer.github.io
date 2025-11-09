@@ -241,6 +241,8 @@ section {
     grid-template-columns: 350px 1fr;
     gap: 80px;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .profile-image {
@@ -316,21 +318,42 @@ section {
 }
 
 .hero-subtitle {
-    font-size: 2rem;
-    color: var(--charcoal);
-    font-family: var(--serif);
-    font-style: italic;
-    margin-bottom: 25px;
+    font-size: 1.5rem;
+    color: var(--white);
+    font-family: var(--sans);
+    font-style: normal;
+    margin-bottom: 35px;
     position: relative;
     display: inline-block;
-    padding: 8px 20px;
-    background: linear-gradient(90deg, var(--electric-blue), var(--lavender));
-    color: var(--white);
-    font-style: normal;
-    font-weight: 600;
-    border-radius: 50px;
-    transform: rotate(-2deg);
-    box-shadow: var(--glow-blue);
+    padding: 16px 28px;
+    background: var(--black);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-left: 8px solid var(--coral);
+    border-bottom: 4px solid var(--electric-blue);
+}
+
+.hero-subtitle::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 40px;
+    height: 40px;
+    background: var(--hot-pink);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.hero-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    width: 60%;
+    height: 3px;
+    background: var(--lavender);
 }
 
 .hero-description {
@@ -342,38 +365,63 @@ section {
 }
 
 .social-links {
-    display: flex;
-    gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 400px;
 }
 
 .social-link {
-    font-size: 0.95rem;
-    font-weight: 600;
-    padding: 14px 32px;
-    border: 2px solid var(--charcoal);
-    border-radius: 30px;
-    transition: all 0.3s ease;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 18px 24px;
+    border: 3px solid var(--black);
+    transition: all 0.2s ease;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-align: center;
+    position: relative;
+    background: var(--white);
+    color: var(--charcoal);
+}
+
+/* Bauhaus geometric backgrounds for each link */
+.social-link:nth-child(1) {
+    background: var(--electric-blue);
+    color: var(--white);
+    border-color: var(--black);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.social-link:nth-child(2) {
+    background: var(--coral);
+    color: var(--white);
+    border-color: var(--black);
+    border-radius: 0;
+}
+
+.social-link:nth-child(3) {
+    background: var(--lavender);
+    color: var(--white);
+    border-color: var(--black);
+    clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.social-link:nth-child(4) {
+    background: var(--hot-pink);
+    color: var(--white);
+    border-color: var(--black);
+    border-radius: 50%;
+    padding: 18px 18px;
 }
 
 .social-link:hover {
-    background-color: var(--coral);
-    border-color: var(--coral);
-    color: var(--white);
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(212, 115, 94, 0.4);
+    transform: scale(1.05);
+    box-shadow: 8px 8px 0 var(--black);
 }
 
-.social-link:nth-child(1):hover {
-    background-color: var(--sage-dark);
-    border-color: var(--sage-dark);
-}
-
-.social-link:nth-child(3):hover {
-    background-color: var(--charcoal);
-    border-color: var(--charcoal);
+.social-link:nth-child(4):hover {
+    box-shadow: 0 0 0 8px var(--black);
 }
 
 /* ========================================
@@ -1007,7 +1055,7 @@ section {
     }
 
     .social-links {
-        justify-content: center;
+        margin: 0 auto;
     }
 
     .section-title {
