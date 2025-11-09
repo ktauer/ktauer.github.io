@@ -550,7 +550,7 @@ section {
 }
 
 .featured-card:hover .card-title {
-    text-decoration: underline wavy var(--bauhaus-blue) !important;
+    text-decoration: underline wavy var(--bauhaus-yellow) !important;
     text-underline-offset: 3px !important;
 }
 
@@ -646,7 +646,7 @@ section {
 }
 
 .clip-card:hover .clip-title {
-    text-decoration: underline wavy var(--bauhaus-blue) !important;
+    text-decoration: underline wavy var(--bauhaus-yellow) !important;
     text-underline-offset: 3px !important;
 }
 
