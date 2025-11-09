@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&family=Archivo+Black&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-bauhaus.css">
     <style>
         .design-nav {
             position: fixed;
@@ -52,8 +52,8 @@
     <div class="design-nav">
         <h4>🎨 Designs</h4>
         <a href="index-original.html">Original</a>
-        <a href="index-bauhaus.html">Bauhaus</a>
-        <a href="index.html" class="active">Current</a>
+        <a href="index-bauhaus.html" class="active">Bauhaus</a>
+        <a href="index.html">Current</a>
     </div>
 
     <div class="custom-cursor"></div>
@@ -504,96 +504,6 @@
             <p>&copy; 2025 Kristen Tauer. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Whimsical floating shapes -->
-    <div id="whimsy-container"></div>
-
-    <script>
-        // Create whimsical floating geometric shapes on click
-        document.addEventListener('click', function(e) {
-            const shapes = ['circle', 'square', 'triangle'];
-            const colors = ['#D93025', '#2B5FCC', '#F9C513'];
-
-            const shape = shapes[Math.floor(Math.random() * shapes.length)];
-            const color = colors[Math.floor(Math.random() * colors.length)];
-
-            const element = document.createElement('div');
-            element.className = 'whimsy-shape ' + shape;
-            element.style.left = e.pageX + 'px';
-            element.style.top = e.pageY + 'px';
-
-            // Random direction
-            const randomX = (Math.random() - 0.5) * 200;
-            const randomY = -Math.random() * 200 - 50;
-            element.style.setProperty('--random-x', randomX + 'px');
-            element.style.setProperty('--random-y', randomY + 'px');
-
-            if (shape === 'triangle') {
-                element.style.borderBottomColor = color;
-            } else {
-                element.style.background = color;
-            }
-
-            document.getElementById('whimsy-container').appendChild(element);
-
-            // Remove after animation
-            setTimeout(() => element.remove(), 3000);
-        });
-    </script>
-
-    <style>
-        #whimsy-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9998;
-        }
-
-        .whimsy-shape {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            pointer-events: none;
-            animation: whimsyFloat 3s ease-out forwards;
-            border: 3px solid #000;
-        }
-
-        .whimsy-shape.circle {
-            border-radius: 50%;
-        }
-
-        .whimsy-shape.square {
-            border-radius: 0;
-        }
-
-        .whimsy-shape.triangle {
-            width: 0;
-            height: 0;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-bottom: 30px solid;
-            background: transparent !important;
-            border-bottom-color: inherit;
-        }
-
-        @keyframes whimsyFloat {
-            0% {
-                transform: translate(0, 0) rotate(0deg) scale(0);
-                opacity: 1;
-            }
-            50% {
-                transform: translate(calc(var(--random-x, 100px)), calc(var(--random-y, -100px))) rotate(180deg) scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: translate(calc(var(--random-x, 100px) * 2), calc(var(--random-y, -100px) * 2)) rotate(360deg) scale(0);
-                opacity: 0;
-            }
-        }
-    </style>
 
     <script src="script.js"></script>
 </body>

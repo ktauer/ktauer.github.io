@@ -6,8 +6,8 @@
     <title>Kristen Tauer - Culture Editor & Writer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&family=Archivo+Black&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-original.css">
     <style>
         .design-nav {
             position: fixed;
@@ -51,9 +51,9 @@
     <!-- Design Navigation -->
     <div class="design-nav">
         <h4>🎨 Designs</h4>
-        <a href="index-original.html">Original</a>
+        <a href="index-original.html" class="active">Original</a>
         <a href="index-bauhaus.html">Bauhaus</a>
-        <a href="index.html" class="active">Current</a>
+        <a href="index.html">Current</a>
     </div>
 
     <div class="custom-cursor"></div>
@@ -85,9 +85,8 @@
                     <p class="hero-subtitle">Culture Editor & Writer</p>
                     <p class="hero-description">I'm a New York-based culture editor and writer at Women's Wear Daily, with a background in digital media production.</p>
                     <div class="social-links">
-            
+                        <a href="https://twitter.com/ktauer" target="_blank" class="social-link">Twitter</a>
                         <a href="https://instagram.com/ktauer" target="_blank" class="social-link">Instagram</a>
-                        <a href="https://www.tiktok.com/@ktauer" target="_blank" class="social-link">TikTok</a>
                         <a href="https://www.linkedin.com/in/kristen-tauer-a5278912" target="_blank" class="social-link">LinkedIn</a>
                         <a href="mailto:kntauer@gmail.com" class="social-link">Email</a>
                     </div>
@@ -105,8 +104,8 @@
                 <div class="title-accent"></div>
             </div>
             <div class="about-content">
-                <p>I'm a New York-based culture editor at Women's Wear Daily, where I cover the intersections of art, fashion, film, theater, music, and dining. My writing explores the creative forces shaping contemporary culture, from emerging artists to established voices.</p>
-                <p>My work has appeared in The New York Times, Teen Vogue, Marie Claire, First We Feast, and other publications. With a foundation in digital media production, I bring a multimedia sensibility to cultural criticism and feature writing.</p>
+                <p>I'm a New York-based culture editor at Women's Wear Daily, where I cover the intersections of art, fashion, film, theater, music, and dining. My writing explores the creative forces shaping contemporary culture—from Sanford Biggers' quilts at the Bronx Museum to Alan Cumming's theatrical fashion on <em>The Traitors</em>, from Phoebe Bridgers' introspective songwriting to the rise of bespoke fashion in New York.</p>
+                <p>My work has appeared in The New York Times, Teen Vogue, Marie Claire, and other publications. I also cofounded Counter Service, a journal about restaurant industry culture. With a background in digital media production, I bring a multimedia sensibility to cultural criticism and feature writing.</p>
                 <p>Say hello: kntauer@gmail.com</p>
             </div>
         </div>
@@ -466,22 +465,6 @@
                         </p>
                     </div>
                 </article>
-
-                <article class="pub-card">
-                    <div class="pub-image">
-                        <img src="images/4.2.jpg" alt="Poetry">
-                    </div>
-                    <div class="pub-content">
-                        <h4 class="pub-name">Poetry</h4>
-                        <p class="pub-description">
-                            <a href="http://www.lulu.com/shop/various/deliver-me/paperback/product-22988051.html" target="_blank"><strong>Deliver Me (Chapbook to benefit the ACLU)</strong>: Hymn for Here</a><br>
-                            <a href="http://www.theoperatingsystem.org/4th-annual-napomo-303030-day-28-kristen-tauer-on-zachary-schomburg/" target="_blank"><strong>The Operating System</strong>: Essay on Zachary Schomburg</a><br>
-                            <strong>WomenArts Quarterly:</strong> Support Group (Print Only/Spring 2014)<br>
-                            <a href="http://www.around-around.com/author/kristentauer/" target="_blank"><strong>Revolver:</strong> 3 Poems</a><br>
-                            <a href="http://thecoachellareview.com/poetry/yourdeal_kristentauer.html" target="_blank"><strong>Coachella Review:</strong> Your Deal</a>
-                        </p>
-                    </div>
-                </article>
             </div>
         </div>
     </section>
@@ -504,96 +487,6 @@
             <p>&copy; 2025 Kristen Tauer. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Whimsical floating shapes -->
-    <div id="whimsy-container"></div>
-
-    <script>
-        // Create whimsical floating geometric shapes on click
-        document.addEventListener('click', function(e) {
-            const shapes = ['circle', 'square', 'triangle'];
-            const colors = ['#D93025', '#2B5FCC', '#F9C513'];
-
-            const shape = shapes[Math.floor(Math.random() * shapes.length)];
-            const color = colors[Math.floor(Math.random() * colors.length)];
-
-            const element = document.createElement('div');
-            element.className = 'whimsy-shape ' + shape;
-            element.style.left = e.pageX + 'px';
-            element.style.top = e.pageY + 'px';
-
-            // Random direction
-            const randomX = (Math.random() - 0.5) * 200;
-            const randomY = -Math.random() * 200 - 50;
-            element.style.setProperty('--random-x', randomX + 'px');
-            element.style.setProperty('--random-y', randomY + 'px');
-
-            if (shape === 'triangle') {
-                element.style.borderBottomColor = color;
-            } else {
-                element.style.background = color;
-            }
-
-            document.getElementById('whimsy-container').appendChild(element);
-
-            // Remove after animation
-            setTimeout(() => element.remove(), 3000);
-        });
-    </script>
-
-    <style>
-        #whimsy-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9998;
-        }
-
-        .whimsy-shape {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            pointer-events: none;
-            animation: whimsyFloat 3s ease-out forwards;
-            border: 3px solid #000;
-        }
-
-        .whimsy-shape.circle {
-            border-radius: 50%;
-        }
-
-        .whimsy-shape.square {
-            border-radius: 0;
-        }
-
-        .whimsy-shape.triangle {
-            width: 0;
-            height: 0;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-bottom: 30px solid;
-            background: transparent !important;
-            border-bottom-color: inherit;
-        }
-
-        @keyframes whimsyFloat {
-            0% {
-                transform: translate(0, 0) rotate(0deg) scale(0);
-                opacity: 1;
-            }
-            50% {
-                transform: translate(calc(var(--random-x, 100px)), calc(var(--random-y, -100px))) rotate(180deg) scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: translate(calc(var(--random-x, 100px) * 2), calc(var(--random-y, -100px) * 2)) rotate(360deg) scale(0);
-                opacity: 0;
-            }
-        }
-    </style>
 
     <script src="script.js"></script>
 </body>
