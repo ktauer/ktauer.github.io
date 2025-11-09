@@ -602,6 +602,20 @@ section {
     transition: transform 0.5s ease;
 }
 
+.featured-card.large .card-image img {
+    object-position: center top;
+}
+
+/* Alan Cumming cover - show full image */
+.featured-card:nth-child(3) .card-image {
+    background: var(--white);
+}
+
+.featured-card:nth-child(3) .card-image img {
+    object-fit: contain;
+    object-position: center;
+}
+
 .featured-card:hover .card-image img {
     transform: scale(1.08);
 }
@@ -687,18 +701,21 @@ section {
 }
 
 .publication-logos {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
 }
 
 .publication-logos img {
-    max-width: 180px;
+    max-width: 120px;
+    max-height: 80px;
+    width: auto;
     height: auto;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0) invert(1);
+    opacity: 0.85;
     transition: all 0.3s ease;
 }
 
@@ -797,19 +814,22 @@ section {
 }
 
 .clips-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .clip-card {
     background: var(--white);
-    padding: 30px;
-    border-radius: 12px;
-    border-left: 5px solid var(--coral);
-    transition: all 0.3s ease;
+    padding: 20px 25px;
+    border-radius: 8px;
+    border-left: 4px solid var(--coral);
+    transition: all 0.2s ease;
     position: relative;
     box-shadow: var(--shadow-sm);
+    display: block;
 }
 
 .clip-card:hover {
@@ -828,25 +848,25 @@ section {
 }
 
 .clip-outlet {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--sage);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .clip-title {
-    font-size: 1.25rem;
-    margin-bottom: 15px;
-    line-height: 1.4;
+    font-size: 1.05rem;
+    margin-bottom: 0;
+    line-height: 1.5;
 }
 
 .clip-meta {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 15px;
+    gap: 10px;
+    margin-top: 8px;
 }
 
 .clip-date {
@@ -923,6 +943,86 @@ section {
     opacity: 1;
     transform: rotate(180deg) scale(1);
     color: var(--white);
+}
+
+/* ========================================
+   OTHER PUBLICATIONS SECTION
+   ======================================== */
+.other-publications-section {
+    background: var(--cream);
+    padding: 80px 0;
+}
+
+.other-pubs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.pub-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.pub-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.pub-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: var(--white);
+    padding: 20px;
+}
+
+.pub-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.pub-card:hover .pub-image img {
+    transform: scale(1.05);
+}
+
+.pub-content {
+    padding: 20px;
+}
+
+.pub-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--charcoal);
+}
+
+.pub-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.pub-description a {
+    color: var(--coral);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.pub-description a:hover {
+    color: var(--hot-pink);
+    text-decoration: underline;
 }
 
 /* ========================================
