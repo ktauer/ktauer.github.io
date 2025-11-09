@@ -103,34 +103,25 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target); // Stop observing once animated
         }
     });
 }, observerOptions);
 
 // Observe all sections and cards
-const elementsToAnimate = document.querySelectorAll('.featured-card, .clip-card, .skill-tag');
+const elementsToAnimate = document.querySelectorAll('.featured-card, .clip-card');
 elementsToAnimate.forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    el.style.willChange = 'opacity, transform'; // Hint to browser for optimization
     observer.observe(el);
 });
 
 // ========================================
-// PARALLAX EFFECT FOR HERO
+// PARALLAX EFFECT FOR HERO (DISABLED FOR PERFORMANCE)
 // ========================================
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    const profileImage = document.querySelector('.profile-image');
-
-    if (hero && scrolled < window.innerHeight) {
-        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-        if (profileImage) {
-            profileImage.style.transform = `translateY(${scrolled * 0.15}px)`;
-        }
-    }
-});
+// Disabled to improve scrolling performance
 
 // ========================================
 // ADD FADE IN ANIMATION TO CSS
@@ -163,15 +154,6 @@ contentLinks.forEach(link => {
     link.addEventListener('mouseleave', function() {
         this.style.textDecoration = 'none';
     });
-});
-
-// ========================================
-// RANDOM SKILL TAG POSITIONS (SUBTLE)
-// ========================================
-const skillTags = document.querySelectorAll('.skill-tag');
-skillTags.forEach((tag, index) => {
-    const randomRotation = (Math.random() - 0.5) * 4; // -2 to 2 degrees
-    tag.style.transform = `rotate(${randomRotation}deg)`;
 });
 
 console.log('✨ Kristen Tauer Portfolio - Contemporary Design Loaded');

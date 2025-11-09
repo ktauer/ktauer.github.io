@@ -318,41 +318,41 @@ section {
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--white);
     font-family: var(--sans);
     font-style: normal;
     margin-bottom: 35px;
     position: relative;
     display: inline-block;
-    padding: 16px 28px;
+    padding: 12px 24px;
     background: var(--black);
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    border-left: 8px solid var(--coral);
-    border-bottom: 4px solid var(--electric-blue);
+    letter-spacing: 1.5px;
+    border-left: 6px solid var(--coral);
+    transform: rotate(-2deg);
 }
 
 .hero-subtitle::before {
     content: '';
     position: absolute;
-    top: -8px;
-    right: -8px;
-    width: 40px;
-    height: 40px;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
     background: var(--hot-pink);
     border-radius: 50%;
-    z-index: -1;
 }
 
 .hero-subtitle::after {
     content: '';
     position: absolute;
-    bottom: -12px;
-    left: 50%;
-    width: 60%;
-    height: 3px;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
     background: var(--lavender);
 }
 
@@ -365,20 +365,19 @@ section {
 }
 
 .social-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    max-width: 400px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .social-link {
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 18px 24px;
-    border: 3px solid var(--black);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: 2px solid var(--black);
     transition: all 0.2s ease;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     text-align: center;
     position: relative;
     background: var(--white);
@@ -389,39 +388,38 @@ section {
 .social-link:nth-child(1) {
     background: var(--electric-blue);
     color: var(--white);
-    border-color: var(--black);
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    border-color: var(--charcoal);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
 }
 
 .social-link:nth-child(2) {
     background: var(--coral);
     color: var(--white);
-    border-color: var(--black);
+    border-color: var(--charcoal);
     border-radius: 0;
 }
 
 .social-link:nth-child(3) {
     background: var(--lavender);
     color: var(--white);
-    border-color: var(--black);
-    clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
+    border-color: var(--charcoal);
+    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .social-link:nth-child(4) {
     background: var(--hot-pink);
     color: var(--white);
-    border-color: var(--black);
+    border-color: var(--charcoal);
     border-radius: 50%;
-    padding: 18px 18px;
 }
 
 .social-link:hover {
-    transform: scale(1.05);
-    box-shadow: 8px 8px 0 var(--black);
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 0 var(--charcoal);
 }
 
 .social-link:nth-child(4):hover {
-    box-shadow: 0 0 0 8px var(--black);
+    box-shadow: 0 0 0 5px var(--charcoal);
 }
 
 /* ========================================
@@ -754,58 +752,48 @@ section {
 }
 
 .tag {
-    padding: 12px 28px;
-    border: 3px solid var(--charcoal);
-    background: transparent;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    font-weight: 700;
+    padding: 10px 24px;
+    border: 2px solid var(--charcoal);
+    background: var(--white);
+    border-radius: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.2s ease;
     font-family: var(--sans);
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
-    overflow: hidden;
-}
-
-.tag::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: var(--coral);
-    transform: translate(-50%, -50%);
-    transition: width 0.4s ease, height 0.4s ease;
-    z-index: -1;
+    color: var(--charcoal);
 }
 
 .tag:hover {
-    border-color: var(--coral);
-    color: var(--white);
-    transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(255, 107, 88, 0.4);
-}
-
-.tag:hover::before {
-    width: 120%;
-    height: 300%;
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 var(--charcoal);
 }
 
 .tag.active {
-    background: linear-gradient(135deg, var(--coral), var(--hot-pink));
-    border-color: var(--hot-pink);
+    background: var(--coral);
+    border-color: var(--charcoal);
     color: var(--white);
-    transform: scale(1.1);
-    box-shadow: var(--glow-coral);
+    box-shadow: 5px 5px 0 var(--charcoal);
 }
 
-.tag.active::before {
-    width: 0;
-    height: 0;
+/* Geometric variations for filter tags */
+.tag:nth-child(2) {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+.tag:nth-child(3) {
+    clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.tag:nth-child(5) {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+.tag:nth-child(6) {
+    clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .clips-grid {
@@ -982,43 +970,23 @@ section {
 
 .contact-button {
     display: inline-block;
-    padding: 22px 60px;
-    background-color: var(--white);
-    color: var(--charcoal);
-    font-size: 1.2rem;
+    padding: 20px 50px;
+    background-color: var(--hot-pink);
+    color: var(--white);
+    font-size: 1.1rem;
     font-weight: 700;
-    border-radius: 50px;
-    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    border: 4px solid var(--white);
+    border-radius: 0;
+    transition: all 0.2s ease;
+    border: 3px solid var(--charcoal);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     position: relative;
-    overflow: hidden;
-}
-
-.contact-button::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: var(--charcoal);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.5s ease, height 0.5s ease;
-    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
 }
 
 .contact-button:hover {
-    transform: scale(1.15) rotate(-3deg);
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
-    color: var(--white);
-}
-
-.contact-button:hover::before {
-    width: 400px;
-    height: 400px;
+    transform: translateY(-4px);
+    box-shadow: 8px 8px 0 var(--charcoal);
 }
 
 /* ========================================
